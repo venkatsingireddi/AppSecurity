@@ -7,13 +7,17 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.security.app.entity.Book;
 
-public class bookDetailsImpl implements UserDetails {
+/**
+ * @author VenkatS
+ *
+ */
+public class BookDetailsImpl implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
 	
 	private Book book;
 	
-	public bookDetailsImpl(Book book) {
+	public BookDetailsImpl(Book book) {
 		super();
 		this.book = book;
 	}

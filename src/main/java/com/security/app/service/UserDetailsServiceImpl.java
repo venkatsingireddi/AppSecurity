@@ -14,13 +14,17 @@ import org.springframework.stereotype.Service;
 
 import com.security.app.entity.Book;
 
+/**
+ * @author VenkatS
+ *
+ */
 @Service
-public class service implements UserDetailsService{
+public class UserDetailsServiceImpl implements UserDetailsService{
 	
-	public static final Logger log=LoggerFactory.getLogger(service.class);
+	public static final Logger log=LoggerFactory.getLogger(UserDetailsServiceImpl.class);
 	
 	@Autowired
-	bookRepository bookRepo;
+	BookRepository bookRepo;
 	
 	public int insert(Book book) {
 		log.info("service " +book.getName());
@@ -55,6 +59,6 @@ public class service implements UserDetailsService{
 		if(book==null) {
 			throw new UsernameNotFoundException("User not Found");
 		}
-			return new bookDetailsImpl(book);
+			return new BookDetailsImpl(book);
 	}
 }

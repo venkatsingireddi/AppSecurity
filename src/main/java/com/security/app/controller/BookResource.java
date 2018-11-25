@@ -19,13 +19,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.security.app.entity.Book;
-import com.security.app.service.service;
+import com.security.app.service.UserDetailsServiceImpl;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
+/**
+ * @author VenkatS
+ *
+ */
 @RestController
 @CrossOrigin(origins = "http://localhost:8080")
 @Api(value="Books Controller",description="Books Controller",tags="Book Controller")
@@ -34,7 +38,7 @@ public class BookResource {
 	public static final Logger log=LoggerFactory.getLogger(BookResource.class);
 	
 	@Autowired
-	service service;
+	UserDetailsServiceImpl service;
 	
 	@Autowired
 	BCryptPasswordEncoder encoder;

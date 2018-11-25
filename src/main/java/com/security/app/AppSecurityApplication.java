@@ -12,6 +12,10 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 
 
+/**
+ * @author VenkatS
+ *
+ */
 @SpringBootApplication
 @ComponentScan(basePackages="com.security.app")
 public class AppSecurityApplication {

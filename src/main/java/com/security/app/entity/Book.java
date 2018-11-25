@@ -11,6 +11,10 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * @author VenkatS
+ *
+ */
 @Entity
 @Api(description="This will be store the information of the book")
 @ApiModel(description="This will be store the information of the book")
